@@ -40,7 +40,6 @@ public class RouteData implements IMSerializer {
         this.data = data;
     }
 
-    @Override
     public DataBuffer encode(short version) {
         DataBuffer buffer = new DataBuffer();
         buffer.writeShort(type);
@@ -49,7 +48,6 @@ public class RouteData implements IMSerializer {
         return buffer;
     }
 
-    @Override
     public void decode(DataBuffer buffer, short version) {
         type = buffer.readShort();
         to = buffer.readLong();

@@ -16,13 +16,11 @@ public class UserOnlineServiceImpl implements UserOnlineStatusService{
     @Autowired
     UserStatusRepository userStatusRepository;
 
-    @Override
     public UserStatus getUserStatus(String account) {
 
         return userStatusRepository.findByAccount(account);
     }
 
-    @Override
     public UserStatus insertAndUpdateUserStatus(UserStatus userStatus) {
 
 

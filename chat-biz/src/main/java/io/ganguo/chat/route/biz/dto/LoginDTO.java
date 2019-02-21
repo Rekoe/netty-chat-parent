@@ -27,7 +27,6 @@ public class LoginDTO implements IMSerializer {
         this.login = login;
     }
 
-    @Override
     public DataBuffer encode(short version) {
         DataBuffer buffer = new DataBuffer();
         buffer.writeLong(login.getUin());
@@ -36,7 +35,6 @@ public class LoginDTO implements IMSerializer {
         return buffer;
     }
 
-    @Override
     public void decode(DataBuffer buffer, short version) {
         if(login == null) {
             login = new Login();

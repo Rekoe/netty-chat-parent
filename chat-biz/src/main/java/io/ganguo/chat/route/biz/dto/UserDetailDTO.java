@@ -26,7 +26,6 @@ public class UserDetailDTO implements IMSerializer {
         this.userDetail = userDetail;
     }
 
-    @Override
     public DataBuffer encode(short version) {
         DataBuffer data = new DataBuffer();
         data.writeString(userDetail.getId());
@@ -39,7 +38,6 @@ public class UserDetailDTO implements IMSerializer {
         return null;
     }
 
-    @Override
     public void decode(DataBuffer buffer, short version) {
         if (userDetail == null) {
             userDetail = new UserDetail();

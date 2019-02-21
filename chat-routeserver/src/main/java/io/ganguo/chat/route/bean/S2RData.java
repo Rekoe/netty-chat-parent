@@ -8,17 +8,10 @@ import io.ganguo.chat.core.transport.IMSerializer;
  */
 public class S2RData implements IMSerializer{
 
-
-
-
-
-
-    @Override
     public DataBuffer encode(short version) {
         return null;
     }
 
-    @Override
     public void decode(DataBuffer buffer, short version) {
 
     }

@@ -2,7 +2,6 @@ package io.ganguo.chat.route.session;
 
 import io.ganguo.chat.core.connetion.IMConnection;
 import io.ganguo.chat.route.biz.bean.Presence;
-import io.ganguo.chat.route.biz.entity.Login;
 
 /**
  * Created by Tony on 2/21/15.

@@ -26,7 +26,6 @@ public class PresenceDTO implements IMSerializer {
         this.presence = presence;
     }
 
-    @Override
     public DataBuffer encode(short version) {
         DataBuffer buffer = new DataBuffer();
         buffer.writeLong(presence.getUin());
@@ -35,7 +34,6 @@ public class PresenceDTO implements IMSerializer {
         return buffer;
     }
 
-    @Override
     public void decode(DataBuffer buffer, short version) {
         presence = new Presence();
         presence.setUin(buffer.readLong());

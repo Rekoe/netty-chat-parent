@@ -22,7 +22,6 @@ public class UpdateUserStatusService implements FutureService<UserStatus> {
     @Resource
     UserOnlineServiceImpl userOnlineService;
 
-    @Override
     public UserStatus handler(Object... args) {
 
         UserStatus userStatus1 = (UserStatus)args[0];
@@ -33,12 +32,10 @@ public class UpdateUserStatusService implements FutureService<UserStatus> {
 
     }
 
-    @Override
     public void onSuccess(Object result, Object... args) {
         logger.debug("success insert ......userStatus");
     }
 
-    @Override
     public void onFailure(Throwable throwable, Object... args) {
         logger.warn("error found on insert");
     }

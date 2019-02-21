@@ -52,7 +52,6 @@ public class Header implements IMSerializer {
         this.reserved = reserved;
     }
 
-    @Override
     public DataBuffer encode(short version) {
         DataBuffer data = new DataBuffer(PROTOCOL_HEADER_LENGTH);
         data.writeShort(version);
@@ -62,7 +61,6 @@ public class Header implements IMSerializer {
         return data;
     }
 
-    @Override
     public void decode(DataBuffer data, short ver) {
         version = data.readShort();
         handlerId = data.readShort();

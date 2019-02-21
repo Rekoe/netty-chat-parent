@@ -17,7 +17,6 @@ public class IntFuture {
 
         ListenableFuture<Object> explosion = executorService.submit(
                 new Callable<Object>() {
-                    @Override
                     public Object call() throws Exception {
                         Object o = null;
                         try{
@@ -31,13 +30,11 @@ public class IntFuture {
 
 
         Futures.addCallback(explosion, new FutureCallback<Object>() {
-            @Override
             public void onSuccess(Object o) {
 
                 futureService.onSuccess(o,args);
             }
 
-            @Override
             public void onFailure(Throwable throwable) {
                 futureService.onFailure(throwable,args);
             }

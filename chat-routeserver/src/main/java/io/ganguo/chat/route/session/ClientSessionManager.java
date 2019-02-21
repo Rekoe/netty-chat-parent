@@ -32,7 +32,6 @@ public class ClientSessionManager {
         EventDispatcherManager.getPresenceEventDispatcher().availableSession(session);
 
         session.getConnection().registerCloseListener(new IMConnection.ConnectionCloseListener() {
-            @Override
             public void onClosed(IMConnection connection) {
                 mSessions.remove(session.getUin());
                 session.getPresence().setMode(Presence.Mode.UNAVAILABLE.value());

@@ -22,7 +22,6 @@ public abstract class IMWorker<T> implements Runnable {
         return workingQueue.isEmpty();
     }
 
-    @Override
     public void run() {
         while (isWorking) {
             synchronized (workingQueue) {

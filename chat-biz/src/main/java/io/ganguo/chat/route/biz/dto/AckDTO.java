@@ -47,7 +47,6 @@ public class AckDTO implements IMSerializer {
         this.toServer = toServer;
     }
 
-    @Override
     public DataBuffer encode(short version) {
         DataBuffer buffer = new DataBuffer();
         buffer.writeLong(to);
@@ -56,7 +55,6 @@ public class AckDTO implements IMSerializer {
         return buffer;
     }
 
-    @Override
     public void decode(DataBuffer buffer, short version) {
         to = buffer.readLong();
         ackId = buffer.readString();

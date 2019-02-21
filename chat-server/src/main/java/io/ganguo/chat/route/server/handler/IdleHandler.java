@@ -38,7 +38,6 @@ public class IdleHandler extends ChannelHandlerAdapter {
 
     private  UpdateUserStatusService updateUserStatusService;
 
-    @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
 
         logger.info("idle trigger ....");

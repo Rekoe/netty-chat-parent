@@ -25,7 +25,6 @@ public class UserServiceImpl implements UserService {
      * @param password
      * @return
      */
-    @Override
     public Login login(String account, String password) {
         User user = userRepository.findByAccount(account);
         if (user != null && password != null && user.getPassword().equals(password)) {
@@ -42,7 +41,6 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    @Override
     public User findByUin(long uin) {
         return userRepository.findByUin(uin);
     }
@@ -54,7 +52,6 @@ public class UserServiceImpl implements UserService {
      * @param token
      * @return
      */
-    @Override
     public boolean authenticate(Long uin, String token) {
         Login login = loginRepository.findByUin(uin);
         if (login != null && token != null) {

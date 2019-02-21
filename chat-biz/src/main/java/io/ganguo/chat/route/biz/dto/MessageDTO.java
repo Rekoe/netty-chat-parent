@@ -35,7 +35,6 @@ public class MessageDTO implements IMSerializer {
         this.message = message;
     }
 
-    @Override
     public DataBuffer encode(short version) {
         DataBuffer buffer = new DataBuffer();
         buffer.writeString(message.getId());
@@ -49,7 +48,6 @@ public class MessageDTO implements IMSerializer {
         return buffer;
     }
 
-    @Override
     public void decode(DataBuffer buffer, short version) {
         if (message == null) {
             message = new Message();
