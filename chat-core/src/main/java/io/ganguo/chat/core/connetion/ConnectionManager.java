@@ -37,7 +37,6 @@ public class ConnectionManager {
         long id = mUniqueGenerator.incrementAndGet();
         IMConnection conn = new IMConnection(id, ctx);
         mConnections.put(id, conn);
-        // put id to channel
         ctx.attr(IMConnection.ATTR_CONN_ID).set(id);
         return conn;
     }

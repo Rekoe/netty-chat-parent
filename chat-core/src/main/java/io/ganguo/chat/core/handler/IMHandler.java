@@ -1,7 +1,6 @@
 package io.ganguo.chat.core.handler;
 
 import io.ganguo.chat.core.connetion.IMConnection;
-import io.ganguo.chat.core.transport.IMRequest;
 
 /**
  * Handler

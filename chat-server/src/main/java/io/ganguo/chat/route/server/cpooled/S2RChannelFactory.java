@@ -9,10 +9,9 @@ import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
  */
 public class S2RChannelFactory {
 
-    private GenericObjectPool<Channel> pool = null;
+    private GenericObjectPool<Channel> pool;
 
     private S2RChannelFactory(){
-
         GenericObjectPoolConfig conf = new GenericObjectPoolConfig();
         conf.setMaxTotal(20);
         conf.setMaxIdle(10);

@@ -1,16 +1,7 @@
 package io.ganguo.chat.route.worker;
 
-import io.ganguo.chat.core.protocol.Commands;
-import io.ganguo.chat.core.protocol.Handlers;
-import io.ganguo.chat.core.transport.Header;
-import io.ganguo.chat.core.transport.IMResponse;
 import io.ganguo.chat.core.util.TaskUtil;
 import io.ganguo.chat.route.biz.bean.Presence;
-import io.ganguo.chat.route.biz.dto.PresenceDTO;
-import io.ganguo.chat.route.session.ClientSession;
-import io.ganguo.chat.route.session.ClientSessionManager;
-
-import java.util.Map;
 
 /**
  * Created by Tony on 2/24/15.
